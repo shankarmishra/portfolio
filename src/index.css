@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #000000;
+  --secondary: #1a1a1a;
+  --accent: #333333;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --text-accent: #808080;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-primary text-text-primary font-inter;
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-text-primary;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} 
